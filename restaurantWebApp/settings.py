@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'meals',
     # Registered the blogs page App.
     'blog',
-    
+    # Registered the reservation page App.
+    'reservation',
+
     # installed libs
     'taggit',
     'bootstrap4',
