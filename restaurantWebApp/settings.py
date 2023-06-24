@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'home',
     # Registered the meals page App.
     'meals',
+    # Registered the blogs page App.
+    'blog',
     
     # installed libs
     'taggit',
