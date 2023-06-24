@@ -1,11 +1,10 @@
 from django.shortcuts import render
-# from meals.models import Meal , Category
-# from blog.models import Post
-# from aboutus.models import WhyChooseUs
+from meals.models import Meal
 
 
 def home(request):
 
+    meals = Meal.objects.all()
     
     """
         @rajaHaseebFayyaz
@@ -13,6 +12,8 @@ def home(request):
     """
     
 
-    context = None
+    context = {
+        'meals' : meals
+    }
 
     return render(request , 'index.html' , context)

@@ -42,7 +42,9 @@ INSTALLED_APPS = [
 
     # Registered the home page App.
     'home',
-
+    # Registered the meals page App.
+    'meals',
+    
     # installed libs
     'taggit',
     'bootstrap4',
