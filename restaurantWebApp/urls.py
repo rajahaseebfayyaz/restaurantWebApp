@@ -20,6 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls.conf import include
 
+
+"""
+    @rajaHaseebFayyaz
+    On page loading , by default the app will route to home page.
+    So created home folder using "python manage.py startapp home "
+    Will be render if no path is provided in website url. Eg : http://localhost:8000
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls', namespace='home')),

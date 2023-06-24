@@ -6,23 +6,13 @@ from django.shortcuts import render
 
 def home(request):
 
-    # meals = Meal.objects.all()
-    # meal_list = Meal.objects.all()
-    # categories = Category.objects.all()
-    # posts = Post.objects.all()
-    # latest_post = Post.objects.last()
-    # why_choose_us = WhyChooseUs.objects.all()
+    
+    """
+        @rajaHaseebFayyaz
+        Passing created index.html to be render on home page loading.
+    """
+    
 
-
-
-    # context = {
-    #     'meals' : meals ,
-    #     'meal_list' : meal_list ,
-    #     'categories' : categories ,
-    #     'posts' : posts ,
-    #     'latest_post' : latest_post ,
-    #     'why_choose_us' : why_choose_us ,
-    # }
     context = None
 
     return render(request , 'index.html' , context)

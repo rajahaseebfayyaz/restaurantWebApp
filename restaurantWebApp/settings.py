@@ -40,12 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
 
+    # Registered the home page App.
     'home',
-    #'meals',
-    #'blog',
-    #'contact',
-    #'aboutus',
-    #'reservation',
 
     # installed libs
     'taggit',
@@ -83,6 +79,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'restaurantWebApp.wsgi.application'
 
+
+"""
+    @rajaHaseebFayyaz
+    Un comment the below mentioned database info, to use external database
+    and change the field acc. to new configuration of database.
+"""
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
