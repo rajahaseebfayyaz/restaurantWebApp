@@ -14,8 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls.conf import include
@@ -29,10 +28,18 @@ from django.urls.conf import include
 """
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls', namespace='home')),
     path('meals/', include('meals.urls', namespace='meals')),
-    path('blog/', include('blog.urls', namespace='blog')),
     path('reserve_table/', include('reservation.urls', namespace='reservation')),
-    path('contact/', include('contact.urls', namespace='contact')),
+    path('blog/', include('blog.urls', namespace='blog')),
     path('aboutus/', include('aboutus.urls', namespace='aboutus')),
+    path('contact/', include('contact.urls', namespace='contact')),
+    path('', include('home.urls', namespace='home')),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "Restaurant Admin Panel"
+admin.site.site_title = "Restaurant App Admin "
+admin.site.site_index_title = "Welcome To Restaurant Admin Panel"
