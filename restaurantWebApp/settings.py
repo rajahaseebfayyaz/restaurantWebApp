@@ -20,8 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
+SECRET_KEY =  config("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
