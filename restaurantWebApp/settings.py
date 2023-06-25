@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'reservation',
     # Registered the aboutus page App.
     'aboutus',
+    # Registered the contact page App.
+    'contact',
 
     # installed libs
     'taggit',
