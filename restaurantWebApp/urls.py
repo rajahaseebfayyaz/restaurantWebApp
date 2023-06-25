@@ -36,9 +36,18 @@ urlpatterns = [
     path('', include('home.urls', namespace='home')),
 ]
 
+"""
+    @rajaSaheebFayyaz.
+    Registering Media and template URL, to be able to accessed globally
+"""
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+
+"""
+    @rajaSaheebFayyaz.
+    Setting the head and title to be display in the html UI.
+"""
 
 admin.site.site_header = "Restaurant Admin Panel"
 admin.site.site_title = "Restaurant App Admin "
