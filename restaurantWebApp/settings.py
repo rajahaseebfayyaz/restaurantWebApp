@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'blog',
     # Registered the reservation page App.
     'reservation',
+    # Registered the aboutus page App.
+    'aboutus',
 
     # installed libs
     'taggit',

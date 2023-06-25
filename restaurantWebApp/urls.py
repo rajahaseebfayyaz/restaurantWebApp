@@ -33,4 +33,5 @@ urlpatterns = [
     path('meals/', include('meals.urls', namespace='meals')),
     path('blog/', include('blog.urls', namespace='blog')),
     path('reserve_table/', include('reservation.urls', namespace='reservation')),
+    path('contact/', include('contact.urls', namespace='contact')),
 ]
