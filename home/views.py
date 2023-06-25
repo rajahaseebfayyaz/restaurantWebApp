@@ -5,6 +5,13 @@ from aboutus.models import WhyChooseUs
 
 
 def home(request):
+    """
+    Renders the home page. This is a view to be used as the first step of the application
+    
+    @param request - Django request object ( Required )
+    
+    @return The HttpResponse object of the home page ( Required )
+    """
 
     meals = Meal.objects.all()
     meal_list = Meal.objects.all()

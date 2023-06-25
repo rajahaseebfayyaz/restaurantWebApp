@@ -108,28 +108,29 @@ WSGI_APPLICATION = 'restaurantWebApp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-# DATABASES = {
-# 'default': {
-#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#     'NAME': 'resturantly',
-#     'USER': 'postgres',
-#     'PASSWORD': 'root',
-#     'HOST': 'localhost',
-#     'PORT': '',
-# }
-# }
+DATABASES = {
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'resturantly',
+    'USER': 'postgres',
+    'PASSWORD': 'root',
+    'HOST': 'localhost',
+    'PORT': '5432',
+}
+}
 
 """
     @rajaSaheebFayyaz.
     Self contained databased for development environment.
 """
 
-DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.sqlite3',
-'NAME': BASE_DIR / 'db.sqlite3',
-}
-}
+# DATABASES is a dictionary of database names mapped to a dictionary of settings that can be used to configure the database
+# DATABASES = {
+# 'default': {
+# 'ENGINE': 'django.db.backends.sqlite3',
+# 'NAME': BASE_DIR / 'db.sqlite3',
+# }
+# }
 
 
 

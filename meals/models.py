@@ -15,6 +15,10 @@ class Meal(models.Model):
 
 
     def save(self, *args, **kwargs):
+        """
+         If there is no slug and the name is empty slugify it before saving. This is to avoid issues with non - alphanumeric
+        """
+        # If slug is not set and self. name is not set slug and self. name is not set.
         if not self.slug and self.name:
             self.slug = slugify(self.name)
         super(Meal, self).save(*args, **kwargs)
@@ -24,6 +28,12 @@ class Meal(models.Model):
         verbose_name_plural = 'meals'
 
     def __str__(self) -> str:
+        """
+         Returns the name of the feature. This is used to generate human readability and visual inspection of the feature's name.
+         
+         
+         @return The name of the feature as a string e. g
+        """
         return self.name
 
 class Category(models.Model):
@@ -34,4 +44,10 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
 
     def __str__(self) -> str:
+        """
+         Returns the name of the feature. This is used to generate human readability and visual inspection of the feature's name.
+         
+         
+         @return The name of the feature as a string e. g
+        """
         return self.name

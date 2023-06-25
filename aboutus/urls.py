@@ -1,3 +1,5 @@
+# This is to make it easier to work with django. urlresolvers.
+
 from django.urls import path
 from . import views
 
