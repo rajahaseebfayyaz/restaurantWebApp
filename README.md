@@ -396,6 +396,15 @@ All testing and code validation details are described in a separate file called 
 
 This App is deployed using Heroku.
 
+- Before deployment hide the confidential data in env.py
+- Set debug to False in settings.py (if project is going live)
+- Login to [Heroku](https://www.heroku.com) (Create an account if necessary)
+- In the settings tab for the new application, created one Config name PORT and has a value of 8000
+- Connect your Heroku with your GitHub account and the repository you are working on
+- Then at the bottom, you can do a manual deployment or set it to automatic deployment to deploy every time your repo is updated.   
+
+[Back to top](#show-your-keyboard)
+
 <details>
 <summary>Heroku Deployment steps </summary>
  
@@ -478,33 +487,10 @@ This App is deployed using Heroku.
     Change the current working directory to the location where you want the cloned directory to be made.
     Type git clone, and then paste the URL you copied in Step 3.
 
-$ git clone https://github.com/nandabritto/Bestbeer
+$ git clone https://github.com/rajahaseebfayyaz/resturantProd
 
 Press Enter. Your local clone will be created.
 </details>
-
-
-
-
-
-
-______________________________________________________________
-
-
-
-
-Was deployed using Heroku with the following steps:
-- Before deployment hide the confidential data in env.py
-- Set debug to False in settings.py (if project is going live)
-- Login to [Heroku](https://www.heroku.com) (Create an account if necessary)
-- In the settings tab for the new application, created one Config name PORT and has a value of 8000
-- Connect your Heroku with your GitHub account and the repository you are working on
-- Then at the bottom, you can do a manual deployment or set it to automatic deployment to deploy every time your repo is updated.   
-
-[Back to top](#show-your-keyboard)
-
-
-
 _____________________________________________________________________________  
 
 ## Credits.  
