@@ -280,22 +280,22 @@ All results can be foound here
 
 + On first round of checks, all functions were mmissing semicolon at the end. 
 <p>
-   <img src= "media/readme/js validation/add-reviewjs-validation-before.png" width="40%" alt="JShint validation - before"/>
+   <img src= "./docs/add-reviewjs-validation-before.png" width="40%" alt="JShint validation - before"/>
 </p>
 
 + The missing semicolons were placed and all issues have been solved. 
 <p>
-   <img src= "media/readme/js validation/add-reviewjs-validation-after.png" width="40%" alt="JShint validation - after "/>
+   <img src= "./docs/add-reviewjs-validation-after.png" width="40%" alt="JShint validation - after "/>
 </p>
 
 ### **script.js** 
 <p>
-   <img src= "media/readme/js validation/scriptjs-validation.png" width="40%" alt="JShint validation - before"/>
+   <img src= "./docs/scriptjs-validation.png" width="40%" alt="JShint validation - before"/>
 </p>
 
 ### **toollip.js** 
 <p>
-   <img src= "media/readme/js validation/toollipjs-validation.png" width="40%" alt="JShint validation - before"/>
+   <img src= "./docs/toollipjs-validation.png" width="40%" alt="JShint validation - before"/>
 </p>
 
 
