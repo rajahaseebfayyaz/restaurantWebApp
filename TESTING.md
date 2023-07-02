@@ -245,17 +245,17 @@ All Html pages were validated using W3 tool.
 
 All results can be foound here
 
-<img src="media/readme/htmlvalidation/validation_home.png" width="400" height="200" alt="Pep8 validation post admin.py"/>
-<img src="media/readme/htmlvalidation/validation_register.png" width="400" height="200" alt="Pep8 validation post apps.py"/>
-<img src="media/readme/htmlvalidation/validation_login.png" width="400" height="200" alt="Pep8 validation post forms.py"/>
-<img src="media/readme/htmlvalidation/validation_stylesearch.png" width="400" height="200" alt="Pep8 validation post models.py"/>
-<img src="media/readme/htmlvalidation/validation_stylesearchnoreview.png" width="400" height="200" alt="Pep8 validation post test_models.py"/>
-<img src="media/readme/htmlvalidation/validation_beerseach.png" width="400" height="200" alt="Pep8 validation post test_urls.py"/>
-<img src="media/readme/htmlvalidation/validation_beerseachnoreview.png" width="400" height="200" alt="Pep8 validation post test_views.py"/>
-<img src="media/readme/htmlvalidation/validation403page.png" width="400" height="200" alt="Pep8 validation post urls.py"/>
-<img src="media/readme/htmlvalidation/validation404page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
-<img src="media/readme/htmlvalidation/validation500page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
-<img src="media/readme/htmlvalidation/validation400page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
+<img src="./docs/validation_home.png" width="400" height="200" alt="Pep8 validation post admin.py"/>
+<img src="./docs/validation_register.png" width="400" height="200" alt="Pep8 validation post apps.py"/>
+<img src="./docs/validation_login.png" width="400" height="200" alt="Pep8 validation post forms.py"/>
+<img src="./docs/validation_stylesearch.png" width="400" height="200" alt="Pep8 validation post models.py"/>
+<img src="./docs/validation_stylesearchnoreview.png" width="400" height="200" alt="Pep8 validation post test_models.py"/>
+<img src="./docs/validation_beerseach.png" width="400" height="200" alt="Pep8 validation post test_urls.py"/>
+<img src="./docs/validation_beerseachnoreview.png" width="400" height="200" alt="Pep8 validation post test_views.py"/>
+<img src="./docs/validation403page.png" width="400" height="200" alt="Pep8 validation post urls.py"/>
+<img src="./docs/validation404page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
+<img src="./docs/validation500page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
+<img src="./docs/validation400page.png" width="400" height="200" alt="Pep8 validation post views.py"/>
 
 + While validating Add revieiw page some warnings and one error could be found :
 
@@ -265,7 +265,7 @@ All results can be foound here
   2. **Error:** Duplicate ID id_beer_style. 
     On this case the same Django issue is happening. The id_beer_style is added by django forms when using "{{ style_form.as_p }}" and is not present in the original code. On this way, this error is a known bug and will be added to this section as well.  
 
-<img src="media/readme/htmlvalidation/validatios_add_reviewpage.png" width="400" height="200" alt="Pep8 validation post views.py"/>
+<img src="./docs/validatios_add_reviewpage.png" width="400" height="200" alt="Pep8 validation post views.py"/>
 
 
 ## CSS Code Validation
