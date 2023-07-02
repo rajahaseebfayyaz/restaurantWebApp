@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+if os.path.isfile("env.py"):
+    import env
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
     Reading the secret key from environmet variable, instead of hardcoded value.
 """
 
-from decouple import config
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =  config("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
+SECRET_KEY =   os.environ.get("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,12 +114,12 @@ WSGI_APPLICATION = 'restaurantWebApp.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DATABASES = {
 'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'resturantly',
-    'USER': 'postgres',
-    'PASSWORD': 'root',
-    'HOST': 'localhost',
-    'PORT': '5432',
+    'ENGINE': os.environ.get("DATABSE_URL"),
+    'NAME': os.environ.get("DATABSE_NAME"),
+    'USER': os.environ.get("DATABSE_USER"),
+    'PASSWORD': os.environ.get("DATABSE_PASSWORD"),
+    'HOST': os.environ.get("DATABSE_HOST"),
+    'PORT': os.environ.get("DATABSE_PORT"),
 }
 }
 
