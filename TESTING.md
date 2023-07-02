@@ -6,11 +6,11 @@ During the code development of each function, tests were in place to be sure tha
 
 ## Automated tests
 
-### **Dango_beerapp** 
+### **Dango_restaurant_web_app** 
 
-One function from django_beerapp views were tested using unit tests. Manual testing were conducted on all others to ensure no issues on platform. 
+One function from Dango_restaurant_web_app views were tested using unit tests. Manual testing were conducted on all others to ensure no issues on platform. 
 
-<p><img src="media/readme/unittests_ss/post_unitest_testoverall.jpg"></p>
+<p><img src="./docs/post_unitest_testoverall.jpg"></p>
 
 ========================================================================================
 
@@ -19,13 +19,13 @@ One function from django_beerapp views were tested using unit tests. Manual test
 All functions on the members' app were tested using unit tests. 
 
   * Views 
-<p><img src="media/readme/unittests_ss/members_unitest_testviews.jpg"></p>
+<p><img src="./docs/members_unitest_testviews.jpg"></p>
 
   * Forms 
-<p><img src="media/readme/unittests_ss/members_unitest_testforms.jpg"></p>
+<p><img src="./docs/members_unitest_testforms.jpg"></p>
 
   * Members Unittests Overall
-<p><img src="media/readme/unittests_ss/members_unitest_membersoverall.jpg"></p>
+<p><img src="./docs/members_unitest_membersoverall.jpg"></p>
 
 <details>
 <summary>
@@ -46,27 +46,27 @@ Tests covering User Story:
 ### **Post App** 
 
   * Views 
-<p><img src="media/readme/unittests_ss/post_unitest_testviews.jpg"></p>
+<p><img src="./docs/post_unitest_testviews.jpg"></p>
 
   * Forms 
-<p><img src="media/readme/unittests_ss/post_unitest_testforms.jpg"></p>
+<p><img src="./docs/post_unitest_testforms.jpg"></p>
 
  * Urls 
-<p><img src="media/readme/unittests_ss/post_unitest_testurls.jpg"></p>
+<p><img src="./docs/post_unitest_testurls.jpg"></p>
 
  * Models
 
-<p><img src="media/readme/unittests_ss/post_unitest_testmodels.jpg"></p>
+<p><img src="./docs/post_unitest_testmodels.jpg"></p>
 
   * Post Unittests Overall
-<p><img src="media/readme/unittests_ss/post_unitest_testoverall.jpg"></p>
+<p><img src="./docs/post_unitest_testoverall.jpg"></p>
 
 <details>
 <summary> Tests covering User Stories: 
 
-+ "BEST-2 As a user I want to add a review of my beer"
-+ "BEST-3 - As a user I want to add a picture on my beer review"
-+ "BEST-46 - As a user I want to add a rating to my beer"
++ "BEST-2 As a user I want to add a review of my restaurant"
++ "BEST-3 - As a user I want to add a picture on my restaurant review"
++ "BEST-46 - As a user I want to add a rating to my restaurant"
 </summary>
 
 | test_models| test_views |  test_forms
@@ -81,7 +81,7 @@ Tests covering User Story:
 <details>
 <summary>Tests covering User Story:
 
-+ "BEST-45 -As a user I want to add a beer style "
++ "BEST-45 -As a user I want to add a restaurant style "
 </summary>
 
 | test_forms| test_models |  test_forms |
@@ -114,7 +114,7 @@ Tests covering User Story - "BEST- 52 Search by Beer name"</summary>
 
 At the end of the development of this project (phase 1 - before submission day), used coverage tools to assert that automated tests covered all functions. 
 
-<p><img src="media/readme/unittests_ss/coverage_beer_app.jpg"></p>
+<p><img src="./docs/coverage_beer_app.jpg"></p>
 
 + **django_beerapp/views.py**
 
@@ -142,10 +142,10 @@ At the end of the development of this project (phase 1 - before submission day),
 |:----:|:----:|:----:|
 | 1 | Click Beer Reviews' navbar button| To be directed to the Beer Reviews Page|
 | 2 | Click login's navbar button | To be directed to the Login Page|
-| 3 | Click Beer Styles' navbar dropdown button| To be presented with a list of castrated beer styles on platform|
-| 4 | Click in one of Beer Styles' options on the dropdown menu| To be directed to the beer style category page with a piece of information about my search|
-| 5 | Add a beer name (present on DB) on left field and click search | To be directed to the beer category page with a piece of information about my search|
-| 5 | Add a beer name (not present on DB) on left field and click search | To be directed to the beer category page with information about the unexistence of records about this beer|
+| 3 | Click Beer Styles' navbar dropdown button| To be presented with a list of castrated restaurant styles on platform|
+| 4 | Click in one of Beer Styles' options on the dropdown menu| To be directed to the restaurant style category page with a piece of information about my search|
+| 5 | Add a restaurant name (present on DB) on left field and click search | To be directed to the restaurant category page with a piece of information about my search|
+| 5 | Add a restaurant name (not present on DB) on left field and click search | To be directed to the restaurant category page with information about the unexistence of records about this restaurant|
 | 6 | A logged User click logout's navbar button | To be logged out and directed to the Home Page|
 
 ### **Footer** 
@@ -173,7 +173,7 @@ At the end of the development of this project (phase 1 - before submission day),
 
 | Test Case Id | Description | Expect result|
 |:----:|:----:|:----:|
-| 1 | Click in a beer review card| To be directed to the beer detail view 
+| 1 | Click in a restaurant review card| To be directed to the restaurant detail view 
 | 2 | Click on Edit button present on card| To be direct to update review page|
 | 3 | Click on Delete button present on card| To be direct to confirm deletion page|
 
@@ -186,21 +186,21 @@ At the end of the development of this project (phase 1 - before submission day),
 | 3 | Click First pagination button| To be direct to the first review page|
 | 4 | Click Previous pagination button| To be direct to the previous review page|
 | 5 | Click Go Back button on update review page| To be direct to the previous navigated page|
-| 5 | Click Back to Reviews button on detail review page| To be direct to the beer reviews navigated page|
-| 6 | Click Update button on update review page| To be direct to the beer detail navigated page and be presented with new updated review|
-| 7 | Click on a star in rating beer or update beer page | Populate beer rating field on review form|
-| 8 | Click on beer style dropdown button on add beer rate or update beer page | Be presented with all castrated beer styles on DB|
-| 9 | Click on beer dropdown button on add beer rate or update beer page | Be presented with all castrated beers on DB|
-| 10 | Click on bitterness dropdown button on add beer rate or update beer page | Be presented with all bitterness choices (1-5)|
-| 11 | Click on the money-value dropdown button on add beer rate or update beer page | Be presented with all money-value choices (1-5)|
-| 12 | Click on browse image button on add beer rate or update beer page | Open your directory to find an image to upload|
-| 13 | Check clear on update beer page | Clear image previously uploaded to beer review|
-| 14 | Click Review Your Beer Now on beer or beer style categories page| To be direct to the add beer review page|
-| 15 | Click Login and Review on beer or beer style categories page| To be direct to the login page|
+| 5 | Click Back to Reviews button on detail review page| To be direct to the restaurant reviews navigated page|
+| 6 | Click Update button on update review page| To be direct to the restaurant detail navigated page and be presented with new updated review|
+| 7 | Click on a star in rating restaurant or update restaurant page | Populate restaurant rating field on review form|
+| 8 | Click on restaurant style dropdown button on add restaurant rate or update restaurant page | Be presented with all castrated restaurant styles on DB|
+| 9 | Click on restaurant dropdown button on add restaurant rate or update restaurant page | Be presented with all castrated beers on DB|
+| 10 | Click on bitterness dropdown button on add restaurant rate or update restaurant page | Be presented with all bitterness choices (1-5)|
+| 11 | Click on the money-value dropdown button on add restaurant rate or update restaurant page | Be presented with all money-value choices (1-5)|
+| 12 | Click on browse image button on add restaurant rate or update restaurant page | Open your directory to find an image to upload|
+| 13 | Check clear on update restaurant page | Clear image previously uploaded to restaurant review|
+| 14 | Click Review Your Beer Now on restaurant or restaurant style categories page| To be direct to the add restaurant review page|
+| 15 | Click Login and Review on restaurant or restaurant style categories page| To be direct to the login page|
 
 ## Python (PEP8) Validation
 
-###  **Django_beerapp App** 
+###  **Django_restaurant App** 
 
 <p float="left">
         <img src="media/readme/pep8_ss/django_beerapp_urls.png" width="400" height="200" alt="Pep8 validation django_beerapp urls.py"/>
@@ -310,7 +310,7 @@ A session was held with an end-user. The feedback obtained is listed below:
 
    1.1 The page which we are is slightly highlighted. I would like a more visual appealing colour to differentiate better which page I am on.
 
-   1.2 "Beer Styles" dropdown menu is mixed with operational menu options. I would like to have on Left: "Best Beer" (as home), "Beer Reviews", "Beer Styles" and "Search your beer". On Right, "Register", "Login", "Logout".
+   1.2 "Beer Styles" dropdown menu is mixed with operational menu options. I would like to have on Left: "Best Beer" (as home), "Beer Reviews", "Beer Styles" and "Search your restaurant". On Right, "Register", "Login", "Logout".
 
 2. **Home Page**
 
@@ -330,7 +330,7 @@ A session was held with an end-user. The feedback obtained is listed below:
 
    4.3 Buttons "First Next Last" looks too close to the card box and background colour blend. I would like a better visual to differentiate between buttons and not random text on the foot of the page.
 
-   4.4 The page should inform default sort order, like displaying "Latest beer reviews" instead of just "Beer reviews" and sort that page by review date.
+   4.4 The page should inform default sort order, like displaying "Latest restaurant reviews" instead of just "Beer reviews" and sort that page by review date.
 
 5. **Review Detail Page**
 
@@ -350,79 +350,4 @@ On this test, a checklist was developed to guide the user along with all pages a
 
 ### **Response to the user experience test:**
 
-+ All bugs were fixed before submission. 
-
-## Manual Testing
-========================================================================================
-### Desktop
-
-  Mozilla Firefox: everything is working good. Pages load, all features are working and found no problems in adding, updating, deleting or simply seeing the content. 
-  Google Chrome: Some issues were found(described in the bugs section) and handled before submission. After this, pages load, all features are working, and no problems were found in adding, updating, deleting or simply seeing the content. 
-
-### Mobile
-
-  Tested with Xiaomi Mi6, Mi8 and Mi9, and the platform works well and without any issues. 
-
-### WAVE Accessibility validation
-
-**Home page WAVE analysis**
-    
-<p>
-    <img  src="media/readme/wave/wave-homepage.png" width="60%" alt="Home Page WAVE Results"/>
-</p>
-
-**Beer Reviews WAVE analysis**
-
-<p>
-    <img  src="media/readme/wave/wave_beerreviewpage.png" width="60%" alt="Beer Reviews WAVE Results"/>
-</p>
-
-+ 2 alerts on this page: 
-
-    1. Alert shown on his page refers to alt image from beer reviews cards. The alt is populate with beer review, and on this SS we can find two reviews for the same beer. 
-
-    2. Redundant link is a design choice to improve usability on pagination. 
-
-**Add review Page WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_addreviewpage.png" width="60%" alt="Beer Style Search WAVE (no review) Results"/>
-</p>
-
-+ Alert present on this page refers to changing heading order by design. 
-
-**Update review Page WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_updatereviewpage.png" width="60%" alt="Beer Style Search WAVE (no review) Results"/>
-</p>
-
-**Beer Style Search Page WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_beerstylesearch.png" width="60%" alt="Beer Style Search WAVE (no review) Results"/>
-</p>
-
-**Beer Style Search Page (No reviews) WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_nobeersearchpage.png" width="60%" alt="Beer Style Search WAVE (no review) Results"/>
-</p>
-
-**Beer Search Page WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_beerseachpage.png" width="60%" alt="Beer Search WAVE Results"/>
-</p>
-
-**Beer Search Page (No reviews) WAVE analysis**
-
-  <p>
-    <img  src="media/readme/wave/wave_nobeersearch.png" width="60%" alt="Beer Search (no review) WAVE Results"/>
-</p>
-
-# Unfixed bugs
-
-- Django Create Beer Style class based view is case Sensitivewhich is allowing user to create "duplicated" beer styles that would be shown in lower case in navbar dropdown menu. To fix this bug will require an adicional function on Post App Forms (CreateBeerStyleForm()) and will be fix as high priority in the future.
-
-- Django Automated Forms Creation added the same Id twice in the code when the form is loaded on the page. This bug was found on validation proccess and could not be solved because its is being added by Django under the hood. 
++ All bugs were fixed before submission.
