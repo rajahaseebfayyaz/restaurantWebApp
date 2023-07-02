@@ -4,11 +4,11 @@
 ### Create a user and, post your keyboard, like and comment on others' posts.
       
 
-### Link to the finished site: [LINK](https://show-your-keyboard.herokuapp.com)
+### Link to the finished site: [LINK](https://resturantly-63531e9faaad.herokuapp.com/)
 _____________________________________________________________________________
 ## Am I responsive image 
 
-![Screenshot](./static/images/amiresponsive_readme.png)
+![Screenshot](./docs/main.jpeg)
 
 
 _____________________________________________________________________________
@@ -32,17 +32,15 @@ _____________________________________________________________________________
         - [Navbar](#navbar)
         - [Register](#register)
         - [Login](#login)
-        - [Landing page](#landing-page)
-        - [Create a post](#create-a-post)
-        - [Posts - view all posts](#posts-view-all-posts)
-        - [Post details - See details about a post](#post-details--see-details-about-a-post)
-        - [Like a post](#like-a-post)
-        - [Comments on posts](#comments-on-posts)
-        - [Update your profile image](#update-your-profile-image)
+        - [Home Page](#landing-page)
+        - [Meals](#create-a-post)
+        - [About Us](#posts-view-all-posts)
+        - [Our Blog](#post-details--see-details-about-a-post)
+        - [Reserve a table](#like-a-post)
+        - [Booking list](#comments-on-posts)
+        - [Contact](#update-your-profile-image)
         - [Footer](#footer)
-        - [Search page with results](#search-page-with-or-without-results)
-        - [Login and logout message](#login-and-logout-message-displaying-on-indexhtml)
-        - [404 and 403](#404-and-403-error-messages-are-shown-on-the-website)
+
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
@@ -51,6 +49,7 @@ _____________________________________________________________________________
     - [Frameworks, Packages & Programs Used](#frameworks-packages--programs-used)
 - ### Testing
     - [TESTING.md](#testingmd)
+- ### Issues/Errors i faced and resolution
 - ### Development and Deployment
     - [Development](#development)
     - [Deploy to Heroku](#deployment)
@@ -65,40 +64,112 @@ _____________________________________________________________________________
 ## Project goals and target audience.  
 ### Achieved:
 
--   Creating a website similar to a social media app where users can create posts and upload images, interact 
-and share their joy for custom mechanical keyboards.
+-   A web application that aims to digitalize the process of various restaurant
+
+management operations including ordering and inventory management and POS. This document
+
+aims to capture the system requirements and features particularly related to ordering and
+
+inventory management to be implemented in DineOut version 1.0., with the later releases on
+
+POS (Point of Sale).
+
+- Restauranly is a restaurant management system developed with the intention of automating the day
+
+to day tasks in a restaurant like order and inventory management, bill generation and taking
+
+feedback. This release of the software would deal with these tasks only whereas more areas
+
+might be automated in the future versions of this software. The main purpose is to improve the
+
+performance of the restaurant by eradicating the daily paperwork. With this system the tasks
+
+would be performed in less amount of time and more efficiently. An additional benefit of this
+
+software is that during the rush hours the load can be balanced effectively, and restaurants would
+
+perform better than usual
 
 ### Future projects: 
 
-- Create profile pages where you can see statistics for each user.
-- Implement a recovery password function.
+- Generate bills
+- Auto suggestion for meals , based on user search history.
 
 ## Audience:
 
-- This site is mainly targeted at people who already have an interest in mechanical keyboards, but
-it can also inspire people to join the hobby.   
-- Expected age range 14-50, primarily males.   
-- People who have an income because the hobby is quite expensive.
+Restaurantly app will attempt to replace the traditional manual ordering process and is a new self-
+
+contained software system that consists of two parts: one mobile application and the other is
+
+Firebase database. The mobile application will be used for ordering and interacting with the
+
+inventory while the Firebase database will be used for storing the inventory and ordering related
+
+information about the food items like pending and complete order queues.
+
+The mobile application will have five interfaces. Each for Customer, Manager, Head Chef,
+
+Admin and Chef. Manager can see/edit the status of available/reserved tables. Customer’s
+
+interface will consist of a scrollable menu listing available items and their price. When the
+
+customer selects some dishes and place the order, it will be stored in “pending orders” table in
+
+Firebase database. Head Chef’s interface will be such that he is notified of the pending order and
+
+he is able to assign it to one the available queues of chefs who are then able to see the new order
+
+in their screens or on a central display in kitchen. After each item/dish in an order is prepared,
+
+the order is marked completed through the Head Chef’s interface, the hall manager gets notified
+
+through his interface. Customer’s interface has an option for requesting the bill. Bill is printed
+
+through the Manager’s interface. Admin can change and modify the Firebase database like add
+
+new menus or staff, edit current inventory stock etc.
 
 ## Why would they visit the website in the first place
 
-- They have an interest in mechanical keyboards.
-- Seek information about mechanical keyboards.
-- Learn more about mechanical keyboards.
-- Getting inspired by other builds.
+- They have an interest in online food.
+- Looking for better place to have gathering with family.
+- Learn more about restaurantly.
+- Getting inspired by other good services restaurant.
 - Connect with others in the community.
 - Recruit people to a group buy.
 
 ## Why would they return to the website
 
-- Getting inspired by others' custom keyboards.
-- See what's new in the build community.
-- Create a new post for their new build.
-- Change their profile image.
-- Search for info about a specific keyboard.
-- Connect with others in the community.
-- Ask questions to peers.
-- Recruit people to a group buy
+• Allow Customers to scroll through the menu and select the dishes he/she wants.
+• Allow the Customers to cancel/edit the order any time before its prepared.
+
+• Allow Customers to provide feedback regarding the food and overall service of the
+
+restaurant.
+
+• Allow Customers to request for bill.
+
+• Allow Customers to ask for help through the system.
+
+• Assign Head Chef to assign the dishes in an order to chefs according to their specialties.
+
+• Show dish queues and their status, for Chefs.
+
+• Allow admin to perform CRUD (create, retrieve, update and delete) operations on Staff
+
+Members, Menu Items and Inventory.
+
+• Allow Head Chef to mark orders complete.
+
+• Allow the Head Chef to approve cancellation of dish or order.
+
+• Allow Hall Manager to mark the bill as paid.
+
+• Notify the Hall Manager when a particular order is complete.
+
+• Allow the Hall Manager to see/edit status of tables reserved and available and their
+
+capacities.
 
 
 [Back to top](#show-your-keyboard)
@@ -110,16 +181,34 @@ _____________________________________________________________________________
 
 - Show your keyboard was developed using an agile method. That includes using GitHub issues, user stories and kanban boards.
 That gave me an overview of tasks structured in a to-do, in-progress and done way.
-Project board with user stories [Link](https://github.com/users/andreas-ka/projects/5)     
-![Screenshot](./static/images/kanban_board.png)
+Project board with user stories [Link](https://github.com/rajahaseebfayyaz/restaurantWebApp)     
 
 _____________________________________________________________________________  
 ## Site user goal
-Users of Show Your Keyboard could have several goals, share and take part in keyboards posts, praise posts with comments and follow content pandering to their interests. Users can also use the site to keep an inventory of their keyboards, meet like-minded people and, hopefully 
-get a friend for life along the way.
+There are four types of users that interact with our system (See appendix B). Firstly, there is a
+
+Hall Manager, then Customer, Head Chef and Admin. We’ll provide an interface for Chefs as
+
+well through which they are looking at the status of their order queues, but they will not interact
+
+with our system.
+
+## Customer class
+
+Customers interact with our system directly in order to place order, modify order, get bill and
+
+give feedback. We do not store any information related to customers in our system. The process
+
+of order taking starts from customers placing order and then the other series of events begin.
+
 
 ## Site owner goal
-As a site owner, the goal is to provide a stable and enjoyable user experience with a good website design that encourages user interaction. Ensure the content is well structured and easily managed through the admin panel.
+Head Chef can mark a dish as prepared when a chef tells him to do so. He can approve the
+
+cancellation of an order whenever a customer edits or removes a dish from his order. He can also
+
+assign a dish to a particular chef based on the specialty of the chef.
+
 
 [Back to top](#show-your-keyboard)
 _____________________________________________________________________________  
@@ -144,29 +233,18 @@ _____________________________________________________________________________
 _____________________________________________________________________________ 
 
 ## Lucid chart
-![Screenshot](./static/images/lucid_chart.png)
+![Screenshot](./docs/lucid_chart.png)
 
 ## DrawSql chart
-![Screenshot](./static/images/drawSQL-keebs-display-export-2023-06-14.png)
+![Screenshot](./docs/drawSQL-keebs-display-export-2023-06-14.png)
 
 ## Database and structure
-![Screenshot](./static/images/db_readme.png)   
+![Screenshot](./docs/db_readme.png)   
 
 ## Balsamiq templates   
 
 ### Landing page (index.html)
-![Screenshot](./static/images/balsamiq_index.png)
-
-### See all posts (post_view.html)
-![Screenshot](./static/images/balsamiq_postview.png)
-
-### Details about a specific post (post_detail.html)
-![Screenshot](./static/images/balsamiq_postdetail.png)
-
-### Login page (login.html)
-![Screenshot](./static/images/balsamiq_login.png)
-
-[Back to top](#show-your-keyboard)
+![Screenshot](./docs/main.jpeg)
 
 _____________________________________________________________________________ 
 ## Design and Features:   
@@ -187,83 +265,31 @@ _____________________________________________________________________________
 ### Login page with form
 ![Screenshot](./static/images/login_readme.png)  
 
-## Landing page
-_____________________________________________________________________________ 
-### Carousel header, toggling three images.        
-![Screenshot](./static/images/landing_header_readme.png)   
-### Latest posts and comments are shown on the landing page.     
-![Screenshot](./static/images/landing_latest_readme.png)     
 
-
-## Create a post
+## Reserve a table
 _____________________________________________________________________________ 
 ### A form for creating a new post with the possibility to upload an image.   
-![Screenshot](./static/images/create_post_readme.png)    
+![Screenshot](./docs/reserve_table.jpeg)    
 
 
 
-## Posts (view all posts)
+## Booking list (View booking list)
 _____________________________________________________________________________ 
-### See all posts on the website.   
-![Screenshot](./static/images/post_view_readme.png)     
+### See all bookings on the website.   
+![Screenshot](./docs/booking_list.jpeg)     
 
 
-## Post details ( See details about a post)
+## Blogs details ( See details about a post)
 _____________________________________________________________________________ 
-### Shows details about post, gives you the choice to like and comment on the post.   
-![Screenshot](./static/images/post_detail_readme.png)    
+### Shows details about bligs, gives you the choice to like and comment on the post.   
+![Screenshot](./docs/blogs.jpeg)    
 
 
-## Update your profile image
+
+## ABout-us
 _____________________________________________________________________________ 
-### On the profile page you can add your inventory of keyboards and upload a profile image.  
-### You can also see how many likes you given and posts you made.     
-![Screenshot](./static/images/profile_image_readme.png)     
+![Screenshot](./docs/about-ucs.jpeg)    
 
-
-## Footer
-_____________________________________________________________________________ 
-### Consists of links to social media and the credits to Tristan for the images.   
-![Screenshot](./static/images/footer_readme.png)    
-
-
-## Search page with or without results
-_____________________________________________________________________________ 
-![Screenshot](./static/images/search_result_readme.png)    
-![Screenshot](./static/images/search_noresult_readme.png)  
-
-_____________________________________________________________________________ 
-
-## Login and Logout message displaying on index.html
-- Autocloses after 3 seconds.    
-![Screenshot](./static/images/login_message_readme.png)    
-![Screenshot](./static/images/logout_message_readme.png) 
-
-_____________________________________________________________________________ 
-
-## 404 and 403 error messages are shown on the website.       
-![Screenshot](./static/images/403_error_live_site.png)    
-![Screenshot](./static/images/404_error_live_site.png) 
-
-
-_____________________________________________________________________________  
-## Colour Scheme
-
-### Wanted a simple design with good contrast. The "lime" green pops and makes it eye-catching.
-![Screenshot](./static/images/color_palette.png)    
-
-[Back to top](#show-your-keyboard)
-_____________________________________________________________________________  
-
-## Typography
-- Garamon and Roboto is used on the whole site.    
-
-[Back to top](#show-your-keyboard)
-_____________________________________________________________________________
-## Imagery
-
-- All images on the website are from Tristan ("Captain Sterling"), a legend in the keyboard community.
-- Profile avatars and background are free images found on [Pexel](https://www.pexels.com/) and [freepik](https://www.freepik.com)    
 
 [Back to top](#show-your-keyboard)
 
@@ -290,17 +316,9 @@ ____________________________________________________________________________
 
 [Back to top](#show-your-keyboard)
 ____________________________________________________________________________  
-## Testing.md
-
-- For tests i refer to my [TESTING.md](TESTING.md) file.  
-It contains website and code checkers, bug reports and fixes.
-
-[Back to top](#show-your-keyboard)
-_____________________________________________________________________________  
-
 ## Development
 
-- All code was done in Gitpod
+- All code was done in Github
 - Comitted and pushed to my GitHub repository and 
 [ElephantSQL](https://www.elephantsql.com/) used for Postgres server.   
 
