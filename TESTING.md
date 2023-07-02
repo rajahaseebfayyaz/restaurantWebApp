@@ -203,11 +203,11 @@ At the end of the development of this project (phase 1 - before submission day),
 ###  **Django_restaurant App** 
 
 <p float="left">
-        <img src="media/readme/pep8_ss/django_beerapp_urls.png" width="400" height="200" alt="Pep8 validation django_beerapp urls.py"/>
-        <img src="media/readme/pep8_ss/django_beerapp_views.png" width="400" height="200" alt="Pep8 validation django_beerapp views.py"/>
-        <img src="media/readme/pep8_ss/django_beerapp_asgi.png" width="400" height="200" alt="Pep8 validation django_beerapp asgi.py"/>
-        <img src="media/readme/pep8_ss/django_beerapp_wsgi.png" width="400" height="200" alt="Pep8 validation django_beerapp wsgi.py"/>
-        <img src="media/readme/pep8_ss/django_beerapp_settings.png" width="400" height="200" alt="Pep8 validation django_beerapp settings.py"/>
+        <img src="./docs/django_beerapp_urls.png" width="400" height="200" alt="Pep8 validation django_beerapp urls.py"/>
+        <img src="./docs/django_beerapp_views.png" width="400" height="200" alt="Pep8 validation django_beerapp views.py"/>
+        <img src="./docs/django_beerapp_asgi.png" width="400" height="200" alt="Pep8 validation django_beerapp asgi.py"/>
+        <img src="./docs/django_beerapp_wsgi.png" width="400" height="200" alt="Pep8 validation django_beerapp wsgi.py"/>
+        <img src="./docs/django_beerapp_settings.png" width="400" height="200" alt="Pep8 validation django_beerapp settings.py"/>
 </p>
 
 + The four too long line errors found on settings were related to links from Cloudinary and Auth Password Validators.
@@ -215,26 +215,26 @@ At the end of the development of this project (phase 1 - before submission day),
 ###  **Members App** 
 
 <p float="left">
-        <img src="media/readme/pep8_ss/members-apps.png" width="400" height="200" alt="Pep8 validation members apps.py"/>
-        <img src="media/readme/pep8_ss/members-form.png" width="400" height="200" alt="Pep8 validation members forms.py"/>
-        <img src="media/readme/pep8_ss/members-test_forms.png" width="400" height="200" alt="Pep8 validation members test_forms.py"/>
-        <img src="media/readme/pep8_ss/members-test_views.png" width="400" height="200" alt="Pep8 validation members test_views.py"/>
-        <img src="media/readme/pep8_ss/members-views.png" width="400" height="200" alt="Pep8 validation members views.py"/>
-        <img src="media/readme/pep8_ss/members-urls.png" width="400" height="200" alt="Pep8 validation members urls.py"/>
+        <img src="./docs/members-apps.png" width="400" height="200" alt="Pep8 validation members apps.py"/>
+        <img src="./docs/members-form.png" width="400" height="200" alt="Pep8 validation members forms.py"/>
+        <img src="./docs/members-test_forms.png" width="400" height="200" alt="Pep8 validation members test_forms.py"/>
+        <img src="./docs/members-test_views.png" width="400" height="200" alt="Pep8 validation members test_views.py"/>
+        <img src="./docs/members-views.png" width="400" height="200" alt="Pep8 validation members views.py"/>
+        <img src="./docs/members-urls.png" width="400" height="200" alt="Pep8 validation members urls.py"/>
 </p>
 
 ### **Post App** 
 
 <p float="left">
-        <img src="media/readme/pep8_ss/post-admin.png" width="400" height="200" alt="Pep8 validation post admin.py"/>
-        <img src="media/readme/pep8_ss/post-apps.png" width="400" height="200" alt="Pep8 validation post apps.py"/>
-        <img src="media/readme/pep8_ss/post-forms.png" width="400" height="200" alt="Pep8 validation post forms.py"/>
-        <img src="media/readme/pep8_ss/post-models.png" width="400" height="200" alt="Pep8 validation post models.py"/>
-        <img src="media/readme/pep8_ss/post-test_models.png" width="400" height="200" alt="Pep8 validation post test_models.py"/>
-        <img src="media/readme/pep8_ss/post-test_urls.png" width="400" height="200" alt="Pep8 validation post test_urls.py"/>
-        <img src="media/readme/pep8_ss/post-test_views.png" width="400" height="200" alt="Pep8 validation post test_views.py"/>
-        <img src="media/readme/pep8_ss/post-urls.png" width="400" height="200" alt="Pep8 validation post urls.py"/>
-        <img src="media/readme/pep8_ss/post-views.png" width="400" height="200" alt="Pep8 validation post views.py"/>
+        <img src="./docs/post-admin.png" width="400" height="200" alt="Pep8 validation post admin.py"/>
+        <img src="./docs/post-apps.png" width="400" height="200" alt="Pep8 validation post apps.py"/>
+        <img src="./docs/post-forms.png" width="400" height="200" alt="Pep8 validation post forms.py"/>
+        <img src="./docs/post-models.png" width="400" height="200" alt="Pep8 validation post models.py"/>
+        <img src="./docs/post-test_models.png" width="400" height="200" alt="Pep8 validation post test_models.py"/>
+        <img src="./docs/post-test_urls.png" width="400" height="200" alt="Pep8 validation post test_urls.py"/>
+        <img src="./docs/post-test_views.png" width="400" height="200" alt="Pep8 validation post test_views.py"/>
+        <img src="./docs/post-urls.png" width="400" height="200" alt="Pep8 validation post urls.py"/>
+        <img src="./docs/post-views.png" width="400" height="200" alt="Pep8 validation post views.py"/>
 </p>
 
 + Models error on line 71 is related to Cloudinary defauld image link. 
