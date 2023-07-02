@@ -8,8 +8,12 @@
 _____________________________________________________________________________
 ## Am I responsive image 
 
-![Screenshot](./docs/main.jpeg)
+![Screenshot](./docs/phone.png)
 
+
+![Screenshot](./docs/ipad.png)
+
+![Screenshot](./docs/widepad.png)
 
 _____________________________________________________________________________
 ## Content:
@@ -49,7 +53,7 @@ _____________________________________________________________________________
     - [Frameworks, Packages & Programs Used](#frameworks-packages--programs-used)
 - ### Testing
     - [TESTING.md](#testingmd)
-- ### Issues/Errors i faced and resolution
+- ### Issues/Errors and resolution
 - ### Development and Deployment
     - [Development](#development)
     - [Deploy to Heroku](#deployment)
@@ -249,23 +253,6 @@ _____________________________________________________________________________
 _____________________________________________________________________________ 
 ## Design and Features:   
 
-## Navbar
-_____________________________________________________________________________ 
-### Bootstrap navbar with active links that also collapses on smaller devices.    
-![Screenshot](./static/images/navbar_readme.png)   
-
-
-## Register
-_____________________________________________________________________________ 
-### Register form
-![Screenshot](./static/images/register_readme.png)  
-
-## Login
-_____________________________________________________________________________ 
-### Login page with form
-![Screenshot](./static/images/login_readme.png)  
-
-
 ## Reserve a table
 _____________________________________________________________________________ 
 ### A form for creating a new post with the possibility to upload an image.   
@@ -386,6 +373,14 @@ ____________________________________________________________________________
 - Now add . commit and push the project to GitHub.
 - Go to Heroku and follow the Deployment guide below.  
 
+
+## Issues/Error and resolution
+
+| Error | Description | Resolution|
+|:----:|:----:|:----:|
+| TypeError at reserve_table | n the view function above you passed the argument as list_id but in your url pattern you passed it in as id...this is what is leading to the conflict...resolve this and it should work just fine| whatever argument you pass to you view function should be the same argument you pass to that's view corresponding url pattern|
+| Django Database Error | relation "post" does not existLINE 1: SELECT COUNT(*) FROM "post"| eed to drop your tables and then do syncdb so the new schema is correctly applied.|
+| django/postgres error:'database restaurantly does not exist' | django.db.utils.OperationalError: FATAL:  database "restaurantly" does not exist| python manage.py makemigrations could find it using the settings in DATABASES.|
 
 ## Deployment
 Was deployed using Heroku with the following steps:
