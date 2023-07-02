@@ -1,7 +1,7 @@
-# Show your Keyboard
+# Restaruant Management App
+    - The purpose of this document is to give a detailed description of the requirements for the Restaurantly web site. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system
 
-### A community website for all the mechanical keyboard lovers out here. 
-### Create a user and, post your keyboard, like and comment on others' posts.
+### Reserve table, check fresh menu, read about restaurantly blogs and more.
       
 
 ### Link to the finished site: [LINK](https://resturantly-63531e9faaad.herokuapp.com/)
