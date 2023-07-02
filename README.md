@@ -381,8 +381,118 @@ ____________________________________________________________________________
 | TypeError at reserve_table | n the view function above you passed the argument as list_id but in your url pattern you passed it in as id...this is what is leading to the conflict...resolve this and it should work just fine| whatever argument you pass to you view function should be the same argument you pass to that's view corresponding url pattern|
 | Django Database Error | relation "post" does not existLINE 1: SELECT COUNT(*) FROM "post"| eed to drop your tables and then do syncdb so the new schema is correctly applied.|
 | django/postgres error:'database restaurantly does not exist' | django.db.utils.OperationalError: FATAL:  database "restaurantly" does not exist| python manage.py makemigrations could find it using the settings in DATABASES.|
+| Django project Page not Found  | getting a 404 on the http://localhost:8000/contactus/ page| 'contactus.urls' means contactus/urls.py, i.e. need to have a urls.py in the contactus app folder. The URL dispatcher then will concatenate the path in your main urls.py ('polls/') and the one in the polls/urls.py ('') to resolve the view name (views.index).|
+| Register feature was not showing the error when it happened | | Debug Register function and remove else statement to redirect the user to the same page when it happens. After deleting this part of the function, everything worked fine. 
+
+## Testing and Code validation 
+
+All testing and code validation details are described in a separate file called TESTING.md and can be found [here](TESTING.md).
+
 
 ## Deployment
+
+
+## Deployment 
+
+This App is deployed using Heroku.
+
+<details>
+<summary>Heroku Deployment steps </summary>
+ 
+ 1. Ensure all dependencies are listed on requirements.txt. 
+ 
+ Write on python terminal ` pip3 freeze > requirements.txt`, and a list with all requirements will be created to be read by Heroku. 
+ 
+ 2. Setting up your Heroku
+
+    2.1 Go to Heroku website (https://www.heroku.com/). 
+    2.2 Login to Heroku and go to Create App.
+    
+    <img src="./docs/heroku_login.png">
+    
+    <img src="./docs/heroku_login2.png">
+    
+    2.3 Click in New and Create a new app
+    
+    <img src="./docs/heroku_newapp.png">
+    
+    2.4 Choose a name and set your location
+    
+    <img src="./docs/heroku_createnewapp.png">
+
+    2.5. Navigate to the Resources tab 
+
+    <img src="./docs/heroku_resoursces_tab.png">
+
+    2.6. Click on Resources and Seach for Heroku Postgres and select it on the list.
+    
+    <img src="./docs/heroku-postgres.png">
+    
+    2.7. Navigate to the deploy tab
+    
+    <img src="./docs/heroku_dashboard_deploy.png">
+    
+    2.8. Click in Connect to Github and search for 'nandabritto' GitHub account and 'search_your_brand' repository
+    
+    <img src="./docs/heroku_github_deploy.png">
+    
+    2.9.  Navigate to the settings tab
+    
+    <img src="./docs/heroku_dashboard_settings.png">
+    
+    2.10.  Click on Config Vars, and add your Cloudinary, Database URL (from Heroku-Postgres) and Secret key.    
+    <img src="./docs/heroku_vars_settings.png">
+    
+ 
+
+3. Deployment on Heroku
+
+    3.1.  Navigate to the Deploy tab.
+    
+    <img src="./docs/heroku_dashboard_deploy.png">
+    
+    3.2.  Choose the main branch to deploy and enable automatic deployment to build Heroku every time any changes are pushed on the repository.
+    
+    <img src="./docs/heroku_automatic_deploys.png">
+    
+    3.3 Click on manual deploy to build the App.  When complete, click on View to redirect to the live site. 
+    
+    <img src="./docs/heroku_view.png">
+</details>
+
+<details>
+<summary>Forking the GitHub Repository </summary>
+
+* By forking the GitHub Repository, you will be able to make a copy of the original repository on your own GitHub account, allowing you to view and/or make changes without affecting the original repository by using the following steps:
+
+    Log in to GitHub and locate the GitHub Repository
+    At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
+    You should now have a copy of the original repository in your GitHub account.
+
+* Making a Local Clone
+
+    Log in to GitHub and locate the GitHub Repository
+    Under the repository name, click "Clone or download".
+    To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    Open Git Bash
+    Change the current working directory to the location where you want the cloned directory to be made.
+    Type git clone, and then paste the URL you copied in Step 3.
+
+$ git clone https://github.com/nandabritto/Bestbeer
+
+Press Enter. Your local clone will be created.
+</details>
+
+
+
+
+
+
+______________________________________________________________
+
+
+
+
 Was deployed using Heroku with the following steps:
 - Before deployment hide the confidential data in env.py
 - Set debug to False in settings.py (if project is going live)
@@ -392,6 +502,8 @@ Was deployed using Heroku with the following steps:
 - Then at the bottom, you can do a manual deployment or set it to automatic deployment to deploy every time your repo is updated.   
 
 [Back to top](#show-your-keyboard)
+
+
 
 _____________________________________________________________________________  
 
