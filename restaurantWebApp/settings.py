@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'restaurantWebApp.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DATABASES = {
 'default': {
-    'ENGINE': os.environ.get("DATABSE_URL"),
+    'ENGINE': os.environ.get("DATABSE_URL_LOCAL"),
     'NAME': os.environ.get("DATABSE_NAME"),
     'USER': os.environ.get("DATABSE_USER"),
     'PASSWORD': os.environ.get("DATABSE_PASSWORD"),
