@@ -561,7 +561,9 @@ Telusko Django tutorial
 _____________________________________________________________________________   
 
 ### Acknowledgements
-- Tristan for letting me use his fantastic images.   
+- refrerence https://github.com/younesaitmha/restaurant-System-With-Python-and-Django
+
+- Thanks younesaitmha for allowing me to take reference and inspiration from your project
 
 - My Mentor for continuous helpful feedback.
 
