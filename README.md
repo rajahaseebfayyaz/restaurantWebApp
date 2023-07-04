@@ -246,6 +246,16 @@ _____________________________________________________________________________
 ![Screenshot](./docs/db_readme.png)   
 
 ## Balsamiq templates   
+![Screenshot](./docs/mockupMain.png)   
+
+![Screenshot](./docs/mockupAboutus.png)   
+
+![Screenshot](./docs/mockupReservation.png) 
+
+![Screenshot](./docs/Mockupcontactus.png)   
+
+![Screenshot](./docs/MockupreserveTable.png)   
+
 
 ### Landing page (index.html)
 ![Screenshot](./docs/main.jpeg)
