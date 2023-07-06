@@ -1,5 +1,5 @@
 # Restaruant Management App
-    - The purpose of this document is to give a detailed description of the requirements for the Restaurantly web site. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system
+The purpose of this document is to give a detailed description of the requirements for the Restaurantly web site. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system
 
 ### Reserve table, check fresh menu, read about restaurantly blogs and more.
       

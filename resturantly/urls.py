@@ -1,4 +1,4 @@
-"""restaurantWebApp URL Configuration
+"""resturantly URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -26,7 +26,6 @@ from django.urls.conf import include
     So created home folder using "python manage.py startapp home "
     Will be render if no path is provided in website url. Eg : http://localhost:8000
 """
-# This is a copy of the code that comes from django. utils. urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('meals/', include('meals.urls', namespace='meals')),
@@ -41,7 +40,6 @@ urlpatterns = [
     
     Registering Media and template URL, to be able to accessed globally
 """
-# Add static and media urls to urlpatterns. This is used to avoid duplicate urls
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
@@ -50,7 +48,6 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     
     Setting the head and title to be display in the html UI.
 """
-# This is the function that sets the header and title of the restaurant
 
 admin.site.site_header = "Restaurant Admin Panel"
 admin.site.site_title = "Restaurant App Admin "

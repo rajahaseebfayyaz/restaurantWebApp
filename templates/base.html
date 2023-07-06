@@ -69,14 +69,16 @@
         {% if messages %}
           <ul class="messages">
               {% for message in messages %}
-              <li>
-                <div class="alert {% if message.tags %} alert-{{ message.tags }} {% endif %} text-center">
-                  <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-                  {{ message }}
-                </div>
-              </li>
+              {% if message.tags == "success" %}
+                <li>
+                  <div class="alert {% if message.tags %} alert-{{ message.tags }} {% endif %} text-center">
+                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                  </div>
+                </li>
+              {% endif %}
               {% endfor %}
           </ul>
         {% endif %}
@@ -95,7 +97,9 @@
               <div class="col-md-6 col-lg-3 mb-5" data-aos="fade" data-aos-delay="100">
                 <div class="footer-widget">
                   <h3>Diner Restaurant</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel neque, odio illum. Est minima sint minus sunt ducimus.</p>
+                  <p>The main meal of the day.
+                    A unique 'do-it-yourself' dining experience where diners grill on the Table, their choice of Meat, Seafood and Vegetables starters served on skewers to their preference. A central live grill "Wish Grill" dishing out exotic varieties of veggies and game birds take the experience of dining to a whole new level.
+                  </p>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3 mb-5" data-aos="fade" data-aos-delay="200">
@@ -121,7 +125,7 @@
                 <div class="footer-widget footer-contact-widget">
 
                   <h3>Subscribe</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>Please Enter your Email address to connect with us, and we updated about latest stories of Restaurantly.</p>
                   <form action="" class="form-subscribe mb-5">
                     <div class="form-group form-field">
                       <input type="submit" value="Send" class="btn btn-primary">
