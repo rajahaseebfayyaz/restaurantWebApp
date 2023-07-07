@@ -283,10 +283,12 @@ else:
 
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #os.environ.get("SMTP_SERVER")  #'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST =  os.environ.get("SMTP_SERVER") #'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get("SMTP_EMAIL")
+EMAIL_HOST_PASSWORD = os.environ.get("SMTP_API_KEY")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+SENDGRID_ECHO_TO_STDOUT=True

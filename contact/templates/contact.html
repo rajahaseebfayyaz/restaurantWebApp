@@ -24,12 +24,13 @@
             <div class="row justify-content-center mb-5">
               <div class="col-md-8  text-center">
                 <h2 class="mb-3">Contact Form</h2>
-                <p class="lead">Please fill the below form , to be in touvh with us.</p>
+                <p class="lead">Please fill the below form , to be in touch with us.</p>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-10 p-5 form-wrap">
-                <form method="POST">
+                <!-- <form method="POST"> -->
+                  <form method="POST">
                     {% csrf_token %}
                     {% bootstrap_form form %}
                     {% buttons %}
@@ -41,7 +42,10 @@
           </div>
         </div> <!-- .section -->
 
-        <div class="map-wrap" id="map"  data-aos="fade"></div>
+        <!-- <div> class="map-wrap" id="map"  data-aos="fade"> -->
+          <div>
+          <img src="{% static 'img/maps.png' %}" alt="Image placeholder" style="margin-left: 60px;margin-right: 60px;" class="center-map">
+        </div>
 
         <div class="section" data-aos="fade">
           <div class="container">

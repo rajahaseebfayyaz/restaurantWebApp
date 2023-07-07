@@ -1490,3 +1490,15 @@ textarea.form-control {
 .meal_img{
   width: 100% !important ;
 }
+
+.responsive-paragraph {
+  line-height: 1.8;
+  font-size: 26px;
+}
+
+.center-map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
