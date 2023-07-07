@@ -8,12 +8,7 @@ The purpose of this document is to give a detailed description of the requiremen
 _____________________________________________________________________________
 ## Am I responsive image 
 
-![Screenshot](./docs/phone.png)
-
-
-![Screenshot](./docs/ipad.png)
-
-![Screenshot](./docs/widepad.png)
+![Screenshot](./docs/allinoneresponsive.png)
 
 _____________________________________________________________________________
 ## Content:
