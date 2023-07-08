@@ -16,3 +16,14 @@ class Reservation(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class TokenModle(models.Model):
+    token = models.CharField(max_length=80)
+    
+    class Meta:
+        verbose_name = 'TokenModle'
+        verbose_name_plural = 'TokenModle'
+
+    def __str__(self) -> str:
+        return self.name

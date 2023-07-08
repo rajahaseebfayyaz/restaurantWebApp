@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Reservation
-from .forms import ReserveTableForm
+from .models import Reservation, TokenModle
+from .forms import ReserveTableForm, TokenForm
 from django.contrib import messages
 
 
 def reserve_table(request):
+
     reserve_form = ReserveTableForm()
 
     if request.method == 'POST' :        
@@ -89,7 +90,26 @@ def reserve_table(request):
 
 
 def customer_detail(request):
-     detail = Reservation.objects.all()
+     token_form = TokenForm(request.POST)
+
+     token = ''
+     
+     print("triggered","\n\n")
+     
+     detail = [] #Reservation.objects.all()
+
+     if token_form.is_valid():
+         token = token_form["token"].value()
+         if token == "pass":
+             detail = Reservation.objects.all()
+         else:
+             #pass
+             messages.success(request, "Admin token not matched, can't show user list.")
+     else:
+         pass
+         #messages.success(request, "Enter the admin token to view the user booking list.")
+             
+
      context = {'detail':detail}
      return render(request , 'user_detail.html' , context)
  

@@ -3,7 +3,13 @@
 {% load static %}
 {% block body %}
 
+    <script>
 
+        var details = [];
+
+        var user_token = "";
+
+        </script>
 
     <div class="main-wrap">
     <div class="cover_1 cover_sm">
@@ -25,7 +31,30 @@
 </br>
 </br>
 </br>
-<h1 style='margin-left:42%;'>User List</h1>
+
+
+</br>
+</br>
+
+
+
+{% if detail %}
+    <h1 style= 'text-align: center;'>User List </h1> 
+{% else %}
+    <h3 style= 'text-align: center;'> (*** Enter admin token to view user list. ***) </h3>
+
+    <form style="justify-content:center; display: flex;" method="POST">
+        {% csrf_token %}
+        <!-- <label for="token">Enter admin token to view the user list:</label> -->
+        <input type="password" id="token" name="token">
+
+        {% buttons %}
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        {% endbuttons %} 
+    </form>
+    
+{% endif %}
 <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable" style='margin-left:30px;'>
     <thead class="table-light">
         <tr>
