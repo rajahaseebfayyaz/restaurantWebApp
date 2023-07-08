@@ -35,7 +35,8 @@ def send_email(request):
             #return reverse('contact:send_success')
             #return HttpResponseRedirect(reverse('news:home'))
         else:
-            messages.success(request, "Your form is not valid , please check the form fields.")
+            #messages.success(request, "Your form is not valid , please check the form fields.")
+            pass
 
     context = {
         'form': form,
