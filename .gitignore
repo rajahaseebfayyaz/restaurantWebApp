@@ -5,6 +5,8 @@
 *.env.local
 *.env.staging
 .env
+.env.py
+env.py
 
 # Source for below gitignore :
 #https://github.com/github/gitignore/blob/main/Python.gitignore
