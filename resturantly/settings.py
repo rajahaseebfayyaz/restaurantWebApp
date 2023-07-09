@@ -158,9 +158,9 @@ WSGI_APPLICATION = 'resturantly.wsgi.application'
 
 if EXCEUTION_FLAG == 'PROD':
     DATABASES = {
-    #'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
-    'default':
-    dj_database_url.parse(os.environ.get("DATABSE_URL"))}
+    'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
+    #'default':
+    #dj_database_url.parse(os.environ.get("DATABSE_URL"))}
 else:
     DATABASES = {
     'default': {
