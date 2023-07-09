@@ -41,11 +41,11 @@ SECRET_KEY =   os.environ.get("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_h
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if EXCEUTION_FLAG == 'PROD':
-    DEBUG = False
+    DEBUG = os.environ.get("DEBUG_FLAG")
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ["resturantly-63531e9faaad.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["*","resturantly-63531e9faaad.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -158,10 +158,9 @@ WSGI_APPLICATION = 'resturantly.wsgi.application'
 
 if EXCEUTION_FLAG == 'PROD':
     DATABASES = {
-    'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
-    # 'default':
-    # dj_database_url.parse(os.environ.get("DATABSE_URL"))
-    # }
+    #'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
+    'default':
+    dj_database_url.parse(os.environ.get("DATABSE_URL"))}
 else:
     DATABASES = {
     'default': {
