@@ -89,13 +89,6 @@ software is that during the rush hours the load can be balanced effectively, and
 
 perform better than usual
 
-### Future/Improvements in  projects Features: 
-
-- Generate bills
-- Auto suggestion for meals , based on user search history.
-- Social media page for the project and add the links href in header or website.
-- The user list should only be accessible to admin users; on the existing website, an admin password is needed to view the user list, keeping it hidden from other users.
-- The email that is already developed should be sent when the contact form is submitted; now, emails are not being delivered since smtp tokens are unavailable.
 
 ## Audience:
 
@@ -174,7 +167,16 @@ Members, Menu Items and Inventory.
 capacities.
 
 
-[Back to top](#show-your-keyboard)
+
+### Future implements
+
+- Generate bills
+- Auto suggestion for meals , based on user search history.
+- Social media page for the project and add the links href in header or website.
+- The user list should only be accessible to admin users; on the existing website, an admin password is needed to view the user list, keeping it hidden from other users.
+- The email that is already developed should be sent when the contact form is submitted; now, emails are not being delivered since smtp tokens are unavailable.
+
+[Back to top]()
 
 _____________________________________________________________________________ 
 ## Project management
@@ -212,7 +214,7 @@ cancellation of an order whenever a customer edits or removes a dish from his or
 assign a dish to a particular chef based on the specialty of the chef.
 
 
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
 _____________________________________________________________________________  
 ## User Stories
 - As a Site User, I want the navigation to be user-friendly so I can easily navigate the app content.
@@ -226,7 +228,8 @@ _____________________________________________________________________________
 - As a Site User, I can, if I'm registered, create my post
 - As a Site User, I can, if I'm logged in, edit and delete my created posts if I want to
 - As a Site User, I can easily see the links in the footer and contact the creator of the website
-- As a Site User, I can see the correct error message when i do something wrong or go to a forbidden link    
+- As a Site User, I can see the correct error message when i do something wrong or go to a forbidden link
+- Menu lists issue, on list was not showing up.    
 
 ## Site Owner Stories
 - As a Site Owner, I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
@@ -286,7 +289,7 @@ _____________________________________________________________________________
 ![Screenshot](./docs/about-ucs.jpeg)    
 
 
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
 
 _____________________________________________________________________________  
 ## Languages
@@ -296,7 +299,7 @@ _____________________________________________________________________________
 - JavaScript from Bootstrap 5
 - Python / Django code, all done by myself.   
 
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
 ____________________________________________________________________________  
 ## Frameworks, Packages & Programs Used
 
@@ -309,7 +312,7 @@ ____________________________________________________________________________
     - Sum, Count, Q
 
 
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
 ____________________________________________________________________________  
 ## Development
 
@@ -411,7 +414,7 @@ This App is deployed using Heroku.
 - Connect your Heroku with your GitHub account and the repository you are working on
 - Then at the bottom, you can do a manual deployment or set it to automatic deployment to deploy every time your repo is updated.   
 
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
 
 <details>
 <summary>Heroku Deployment steps </summary>
@@ -578,4 +581,4 @@ _____________________________________________________________________________
 - Tutor support at Code Institute for their support.    
 
 - My family for letting me pursue my career change.   
-[Back to top](#show-your-keyboard)
+[Back to top](#achieved)
