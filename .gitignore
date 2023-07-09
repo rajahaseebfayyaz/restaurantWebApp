@@ -6,7 +6,6 @@
 *.env.staging
 .env
 
-
 # Source for below gitignore :
 #https://github.com/github/gitignore/blob/main/Python.gitignore
 

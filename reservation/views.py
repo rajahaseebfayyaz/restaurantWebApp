@@ -63,7 +63,7 @@ def reserve_table(request):
             your_phone = reserve_form['phone'].value()
             
 
-            if(len(your_phone)) < 8 or len(your_phone) > 20:
+            if(len(your_phone)) < 10 or len(your_phone) > 10:
                 print(your_phone)
                 messages.error(request, "Your phone number field entered is not correct, please check and try again.")
             else:
