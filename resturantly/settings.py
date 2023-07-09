@@ -40,7 +40,10 @@ EXCEUTION_FLAG = os.environ.get("EXCEUTION_FLAG")
 SECRET_KEY =   os.environ.get("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if EXCEUTION_FLAG == 'PROD':
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ["resturantly-63531e9faaad.herokuapp.com", "localhost"]
 
