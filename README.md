@@ -89,10 +89,13 @@ software is that during the rush hours the load can be balanced effectively, and
 
 perform better than usual
 
-### Future projects: 
+### Future/Improvements in  projects Features: 
 
 - Generate bills
 - Auto suggestion for meals , based on user search history.
+- Social media page for the project and add the links href in header or website.
+- The user list should only be accessible to admin users; on the existing website, an admin password is needed to view the user list, keeping it hidden from other users.
+- The email that is already developed should be sent when the contact form is submitted; now, emails are not being delivered since smtp tokens are unavailable.
 
 ## Audience:
 

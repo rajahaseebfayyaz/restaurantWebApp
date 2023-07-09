@@ -31,15 +31,6 @@ All functions on the members' app were tested using unit tests.
 <summary>
 Tests covering User Story:
 
-+  "BEST-20 As a user I want to create my user profile"
-</summary>
-
-| test_forms| test_views |  
-|    ---    |  ---       |
-| CreateSignUpFormTest() |  TestRegister() |  
-|CreateSignUpFormTestInvalid()|TestLogin()|
-||TestLogout()|   | 
-
 </details>
 ========================================================================================
 
