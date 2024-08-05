@@ -1,9 +1,9 @@
 ---
 name: Agile
 about: user story template
-title: "<USER>first deployment"
+title: "<USER>customer decision"
 labels: ''
-assignees: ''
+assignees: rajahaseebfayyaz
 
 ---
 
