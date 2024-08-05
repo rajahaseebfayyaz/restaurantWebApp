@@ -1,10 +1,10 @@
 ---
 name: Agile
-about: user story template
-title: "<USER>customer to view the menu to decide order"
+about: Describe this issue template's purpose here.
+title: ''
 labels: ''
-assignees: rajahaseebfayyaz
+assignees: ''
 
 ---
 
-As a **customer** I want to **view** the restaurant's menu so that I can **decide what to order**
+
