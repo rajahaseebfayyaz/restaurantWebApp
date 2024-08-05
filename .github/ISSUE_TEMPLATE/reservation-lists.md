@@ -1,7 +1,7 @@
 ---
 name: reservation lists
 about: site admin to view the reservation lists
-title: reservation lists
+title: "<ADMIN>reservation lists"
 labels: ''
 assignees: rajahaseebfayyaz
 
