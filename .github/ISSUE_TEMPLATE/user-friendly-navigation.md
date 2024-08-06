@@ -1,5 +1,5 @@
 ---
-name: user friendly naviagtion
+name: user friendly navigation
 about: building user friendly navigation
 title: "<USER>navigation to be user friendly"
 labels: ''
