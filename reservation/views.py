@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Reservation, TokenModle
 from .forms import ReserveTableForm, TokenForm
 from django.contrib import messages
+from django.forms.models import model_to_dict
 
 
 def reserve_table(request):
@@ -24,13 +25,13 @@ def reserve_table(request):
             
 
             from datetime import datetime
-            format = "%d/%m/%Y"
+            format = "%Y-%m-%d"
             res = None
             try:
                 res = bool(datetime.strptime(your_date, format))
 
                 # Now let's compare the dates 
-                passed_datetime = datetime.strptime(your_date, "%d/%m/%Y")
+                passed_datetime = datetime.strptime(your_date, "%Y-%m-%d")
                 now_time = datetime.now()
 
                 if(passed_datetime < now_time):
@@ -41,7 +42,7 @@ def reserve_table(request):
             
 
             if res is False:
-                messages.error(request, "Your entered date format not matched , please follow dd/mm/yyyy")
+                messages.error(request, "Your entered date format not matched , please follow YYYY-MM-DD")
 
 
             your_time = reserve_form["time"].value()
@@ -59,59 +60,34 @@ def reserve_table(request):
             if is_time_validate is False:
                 messages.error(request, "Your entered time format not matched , please follow H:MM")
 
-
-            your_phone = reserve_form['phone'].value()
-            
-
-            if(len(your_phone)) < 10 or len(your_phone) > 10:
-                print(your_phone)
-                messages.error(request, "Your phone number field entered is not correct, please check and try again.")
-            else:
-                if reserve_form.is_valid():
-                    reserve_form.save()
-                    messages.success(request, "Your Reservation is Successfully Completed.")
-
-            context = {'form' : reserve_form}
-            return render(request , 'reservation.html' , context)
+            return render(request , 'reservation.html' , context)  
+        
         except Exception as exc:
             print(exc,"\n*******\n")
 
 
             if reserve_form.is_valid():
-                reserve_form.save()
-            messages.success(request, "Your Reservation is Successfully Completed.")
+                Reservation.objects.create(user=request.user, number_of_persons=reserve_form['number_of_persons'].value(), date=reserve_form['date'].value(), time=reserve_form['time'].value())
+                messages.success(request, "Your Reservation is Successfully Completed.")
+
             context = {'form' : reserve_form}
             
             return render(request , 'reservation.html' , context)
     else:
         context = {'form' : reserve_form}
-        return render(request , 'reservation.html' , context)   
+        return render(request , 'reservation.html' , context)  
 
 
 
 def customer_detail(request):
-     token_form = TokenForm(request.POST)
+    if request.user.is_authenticated:
+        detail = Reservation.objects.filter(user__id = request.user.id)
+    else:
+        messages.error(request, "You must be logged in to see reservations made by you!")
+        detail = None
 
-     token = ''
-     
-     print("triggered","\n\n")
-     
-     detail = [] #Reservation.objects.all()
-
-     if token_form.is_valid():
-         token = token_form["token"].value()
-         if token == "pass":
-             detail = Reservation.objects.all()
-         else:
-             #pass
-             messages.success(request, "Admin token not matched, can't show user list.")
-     else:
-         pass
-         #messages.success(request, "Enter the admin token to view the user booking list.")
-             
-
-     context = {'detail':detail}
-     return render(request , 'user_detail.html' , context)
+    context = {'detail':detail}
+    return render(request , 'user_detail.html' , context)
  
  
 def delete_reservation(request , id):
@@ -119,6 +95,29 @@ def delete_reservation(request , id):
     delete1 =  Reservation.objects.get(pk=id)
     delete1.delete()
     messages.success(request, "Your Reservation is Cancel.")
-    return render(request , 'user_detail.html')
+    return redirect('reservation:user_detail')
 
+def edit_reservation(request, id):
+    if request.method == 'POST':
+        reservation_form = ReserveTableForm(request.POST)
+        
+        if reservation_form.is_valid():
+            reservation = Reservation.objects.get(id=id)
+            reservation.number_of_persons = reservation_form['number_of_persons'].value()
+            reservation.date = reservation_form['date'].value()
+            reservation.time = reservation_form['time'].value()
+            reservation.save()
 
+            messages.success(request, 'Updated reservation successfully!')
+            return redirect('reservation:user_detail')
+        else:
+            messages.error(request, 'Something happened, make sure to follow provided format.')
+
+    reservation = Reservation.objects.get(id=id)
+    reservation_form = ReserveTableForm(initial=model_to_dict(reservation))
+
+    context = {
+        'form': reservation_form
+    }
+
+    return render(request, 'edit_reservation.html', context)

@@ -37,7 +37,7 @@
             <li class="active"><a href="/">Home</a></li>
             <li><a href="{% url 'meals:meal_list' %}">Meals</a></li>
             <li><a href="{% url 'aboutus:aboutus_list' %}">About Us</a></li>
-            <li><a href="{% url 'blog:post_list' %}">Our Blog</a></li>
+            <!-- <li><a href=" url 'blog:post_list' ">Our Blog</a></li> -->
             <li><a href="{% url 'reservation:reserve_table' %}">Reserve A Table</a></li>
             <li><a href="{% url 'reservation:user_detail' %}">Booking List</a></li>
             <li><a href="{% url 'contact:send_email' %}">Contact</a></li>
@@ -59,8 +59,19 @@
             <strong>
             <a href="/" class="site-logo" style="text-align: center;">🍽️</a>
           </strong>
-          </div>
-          <div class="col-5 col-md-3 text-right menu-burger-wrap">
+        </div>
+        <div class="col-3 col-md-2">
+          <ul class="list-unstyled social">
+            {% if request.user.is_authenticated %}
+            <li><a class="btn btn-primary py-2" href="{% url 'accounts:logout_user' %}">Logout</a></li>
+            <li><a class="btn btn-secondary py-2" href="{% url 'accounts:me' %}">Profile</a></li>
+            {% else %}
+             <li><a href="{% url 'accounts:login_user' %}" class="btn btn-primary py-2">Login</a></li>
+             <li><a href="{% url 'accounts:signup_user' %}" class="btn btn-secondary py-2">Sign Up</a></li>
+             {% endif %}
+           </ul>
+         </div>
+          <div class="col-2 col-md-1 text-right menu-burger-wrap">
             <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>
           </div>
         </div>

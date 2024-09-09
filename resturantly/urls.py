@@ -30,9 +30,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('meals/', include('meals.urls', namespace='meals')),
     path('reserve_table/', include('reservation.urls', namespace='reservation')),
-    path('blog/', include('blog.urls', namespace='blog')),
+    
+    # needs rework a little
+    # path('blog/', include('blog.urls', namespace='blog')),
+    
     path('aboutus/', include('aboutus.urls', namespace='aboutus')),
     path('contact/', include('contact.urls', namespace='contact')),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
     path('', include('home.urls', namespace='home')),
 ]
 

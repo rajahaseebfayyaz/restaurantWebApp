@@ -1,11 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    phone = models.IntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
     number_of_persons = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
@@ -15,7 +14,7 @@ class Reservation(models.Model):
         verbose_name_plural = 'reservations'
 
     def __str__(self) -> str:
-        return self.name
+        return self.user.username + ' on ' + self.date.isoformat()
 
 
 class TokenModle(models.Model):

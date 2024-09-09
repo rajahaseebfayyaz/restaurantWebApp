@@ -37,7 +37,9 @@ EXCEUTION_FLAG = os.environ.get("EXCEUTION_FLAG")
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =   os.environ.get("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
+# SECRET_KEY =   os.environ.get("SECRET_KEY") #os.environ['SECRET_KEY'] #'o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'
+# SECRET_KEY =   os.environ['o+un^+_hcls)sl2dv$9ul8sfg!c0k1a&e@)7(3uknhgzbz_7@w'] 
+SECRET_KEY = os.environ.get('SECRET_KEY', 'default_fallback_value')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if EXCEUTION_FLAG == 'PROD':
@@ -65,6 +67,8 @@ INSTALLED_APPS = [
     #  Registering Apps used in the project
        
 
+    # Registered the accounts page App.
+    'accounts',
     # Registered the home page App.
     'home',
     # Registered the meals page App.
@@ -77,6 +81,7 @@ INSTALLED_APPS = [
     'aboutus',
     # Registered the reservation page App.
     'reservation',
+    
 
     # installed libs
     'taggit',
@@ -156,22 +161,22 @@ WSGI_APPLICATION = 'resturantly.wsgi.application'
 # print("dsdsdsds/n",os.environ("DATABSE_URL"))
 # exit()
 
-if EXCEUTION_FLAG == 'PROD':
-    DATABASES = {
-    'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
-    #'default':
-    #dj_database_url.parse(os.environ.get("DATABSE_URL"))}
-else:
-    DATABASES = {
-    'default': {
-        'ENGINE': os.environ.get("DATABSE_URL_LOCAL"),
-        'NAME': os.environ.get("DATABSE_NAME"),
-        'USER': os.environ.get("DATABSE_USER"),
-        'PASSWORD': os.environ.get("DATABSE_PASSWORD"),
-        'HOST': os.environ.get("DATABSE_HOST"),
-        'PORT': os.environ.get("DATABSE_PORT"),
-    }
-    }
+# if EXCEUTION_FLAG == 'PROD':
+#     DATABASES = {
+#     'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
+#     #'default':
+#     #dj_database_url.parse(os.environ.get("DATABSE_URL"))}
+# else:
+#     DATABASES = {
+#     'default': {
+#         'ENGINE': os.environ.get("DATABSE_URL_LOCAL"),
+#         'NAME': os.environ.get("DATABSE_NAME"),
+#         'USER': os.environ.get("DATABSE_USER"),
+#         'PASSWORD': os.environ.get("DATABSE_PASSWORD"),
+#         'HOST': os.environ.get("DATABSE_HOST"),
+#         'PORT': os.environ.get("DATABSE_PORT"),
+#     }
+#     }
 
 
 
@@ -181,16 +186,12 @@ else:
 """
 
 # DATABASES is a dictionary of database names mapped to a dictionary of settings that can be used to configure the database
-# DATABASES = {
-# 'default': {
-# 'ENGINE': 'django.db.backends.sqlite3',
-# 'NAME': BASE_DIR / 'db.sqlite3',
-# }
-# }
-
-
-
-
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': BASE_DIR / 'db.sqlite3',
+}
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
