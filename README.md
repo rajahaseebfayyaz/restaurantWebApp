@@ -202,7 +202,7 @@ with our system.
 
 Customers interact with our system directly in order to place order, modify order, get bill and
 
-give feedback. We do not store any information related to customers in our system. The process
+give feedback. Customer can sign up /login and also edit there booking. The process
 
 of order taking starts from customers placing order and then the other series of events begin.
 
@@ -218,6 +218,7 @@ assign a dish to a particular chef based on the specialty of the chef.
 [Back to top](#achieved)
 _____________________________________________________________________________  
 ## User Stories
+- As a Site User, I want to sign up/ login to edit and view my booking
 - As a Site User, I want the navigation to be user-friendly so I can easily navigate the app content.
 - As a Site User, I want to know info on what the app is about so that I can use its functionality for mutual benefit
 - As a Site User, I can be able to register, login and logout from the website so that I can have a safe environment to work with
@@ -445,7 +446,7 @@ This App is deployed using Heroku.
 
     <img src="./docs/heroku_resoursces_tab.png">
 
-    2.6. Click on Resources and Seach for Heroku Postgres and select it on the list.
+    2.6. Click on Resources and Search for Heroku Postgres and select it on the list.
     
     <img src="./docs/heroku-postgres.png">
     
@@ -508,6 +509,8 @@ _____________________________________________________________________________
 ## Credits.  
 
 ### Code
+
+The crud funcitonality has been coded locally in vs code as well and then pushed/commited to gitpod.
 
 Inspired by CI's blog tutorial "I think, therefor i blog"
 
