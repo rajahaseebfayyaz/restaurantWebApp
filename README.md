@@ -8,7 +8,8 @@ The purpose of this document is to give a detailed description of the requiremen
 _____________________________________________________________________________
 ## Am I responsive image 
 
-![Screenshot](./docs/allinoneresponsive.png)
+<img width="1313" alt="Screenshot 2024-09-10 at 20 17 14" src="https://github.com/user-attachments/assets/2e806193-5b79-4655-b60e-41f752ee7ac7">
+
 
 _____________________________________________________________________________
 ## Content:
