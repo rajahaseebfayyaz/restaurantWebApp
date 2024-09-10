@@ -194,9 +194,7 @@ There are four types of users that interact with our system (See appendix B). Fi
 
 Hall Manager, then Customer, Head Chef and Admin. We’ll provide an interface for Chefs as
 
-well through which they are looking at the status of their order queues, but they will not interact
-
-with our system.
+well through which customer can sign up/login to make booking,edit,view and delete booking as well.
 
 ## Customer class
 
